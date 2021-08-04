@@ -40,26 +40,24 @@ config :mdns_lite,
   # is "nerves-<4 digit serial#>.local".  mdns_lite also advertises
   # "nerves.local" for convenience. If more than one Nerves device is on the
   # network, delete "nerves" from the list.
-
+  dns_bridge_enabled: true,
+  dns_bridge_port: 53,
   host: [:hostname, "nerves"],
   ttl: 120,
 
   # Advertise the following services over mDNS.
   services: [
     %{
-      name: "SSH Remote Login Protocol",
       protocol: "ssh",
       transport: "tcp",
       port: 22
     },
     %{
-      name: "Secure File Transfer Protocol over SSH",
       protocol: "sftp-ssh",
       transport: "tcp",
       port: 22
     },
     %{
-      name: "Erlang Port Mapper Daemon",
       protocol: "epmd",
       transport: "tcp",
       port: 4369

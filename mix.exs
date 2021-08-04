@@ -42,7 +42,8 @@ defmodule CircuitsQuickstart.MixProject do
       {:nerves, "~> 1.7.7", runtime: false},
       {:shoehorn, "~> 0.7.0"},
       {:ring_logger, "~> 0.8.1"},
-      {:toolshed, "~> 0.2.13"},
+      {:toolshed, "~> 0.2.13", path: "~/git/elixir-toolshed/toolshed", override: true},
+      {:mdns_lite, path: "~/git/nerves-networking/mdns_lite", override: true},
 
       # Circuits projects
       {:circuits_uart, "~> 1.3"},
