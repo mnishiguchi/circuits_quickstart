@@ -42,6 +42,7 @@ config :mdns_lite,
   # network, delete "nerves" from the list.
   dns_bridge_enabled: true,
   dns_bridge_port: 53,
+  dns_bridge_recursive: true,
   host: [:hostname, "nerves"],
   ttl: 120,
 
